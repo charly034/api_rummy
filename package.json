@@ -1,7 +1,7 @@
 {
-  "name": "express-api-base",
+  "name": "rummys-api",
   "version": "1.0.0",
-  "description": "Plantilla base reutilizable para APIs REST con Express y JavaScript",
+  "description": "API REST para registro de partidas y tabla de posiciones de Rummy",
   "main": "src/server.js",
   "type": "module",
   "scripts": {
@@ -9,12 +9,7 @@
     "start": "node src/server.js",
     "migrate": "node scripts/migrate.js"
   },
-  "keywords": [
-    "express",
-    "api",
-    "rest",
-    "template"
-  ],
+  "keywords": ["express", "rummy", "api", "rest"],
   "author": "",
   "license": "MIT",
   "dependencies": {

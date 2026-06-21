@@ -5,10 +5,12 @@ import {
   createPartidaHandler,
   updatePartidaHandler,
   deletePartidaHandler,
+  getTablaGeneralHandler,
 } from "./partidas.controller.js";
 
 const router = express.Router();
 
+router.get("/tabla-general", getTablaGeneralHandler);
 router.get("/partidas", listPartidas);
 router.get("/partidas/:id", getPartida);
 router.post("/partidas", createPartidaHandler);

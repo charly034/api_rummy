@@ -4,6 +4,7 @@ import {
   createPartida,
   updatePartida,
   deletePartida,
+  getTablaGeneral,
 } from "./partidas.service.js";
 
 const listPartidas = async (req, res, next) => {
@@ -56,10 +57,20 @@ const deletePartidaHandler = async (req, res, next) => {
   }
 };
 
+const getTablaGeneralHandler = async (req, res, next) => {
+  try {
+    const tabla = await getTablaGeneral();
+    res.status(200).json({ status: "ok", data: tabla });
+  } catch (error) {
+    next(error);
+  }
+};
+
 export {
   listPartidas,
   getPartida,
   createPartidaHandler,
   updatePartidaHandler,
   deletePartidaHandler,
+  getTablaGeneralHandler,
 };
