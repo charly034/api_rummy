@@ -318,7 +318,7 @@ const getTablaGeneral = async () => {
      LEFT JOIN max_pos mp           ON pj.partida_id = mp.partida_id
      WHERE j.activo = TRUE
      GROUP BY j.id, j.nombre, j.apodo
-     ORDER BY puntos_generales DESC, primeros DESC`,
+     ORDER BY puntos_generales DESC, total_puntos DESC`,
   );
   return rows;
 };
